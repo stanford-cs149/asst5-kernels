@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-
+import sys
 
 def create_submission():
     """
@@ -16,6 +16,8 @@ def create_submission():
 
     # Read text
     raw_cuda_source = Path(cuda_source_path).read_text()
+    assert len(sys.argv) > 1, "Please provide SUNet ID as an argument"
+    kid = sys.argv[1]
 
     # 2. Define the content for the new submission.py file
     submission_content = f'''import torch
@@ -50,13 +52,13 @@ if sys.stderr is None: sys.stderr = io.StringIO()
 # print("Compiling FlashAttention CUDA kernel... (This may take a moment)")
 
 cuda_module = load_inline(
-    name='flash_attention_cuda',
+    name='flash_attention_cuda_{kid}',
     cpp_sources=cpp_source,
     cuda_sources=cuda_source,
     functions=['flash_attention_forward'],
     verbose=True,        # Print compilation log
-    with_cuda=True,
-    extra_cuda_cflags=["-O2"]
+    # with_cuda=True,
+    # extra_cuda_cflags=["-O2"]
 )
 # print("Compilation complete.")
 

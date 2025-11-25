@@ -105,7 +105,7 @@ Our job queue submission environment supports [Triton](https://triton-lang.org/m
 
 If you wish to write a solution directly in CUDA, under each problem folder, create `submission.cu` following the pattern given by the code skeleton in `/templates/template.cu`. The PyTorch binding for the kernel is in `wrap_cuda_submission.py`. 
 
-**Important**: Since the H100 job queue only accepts `submission.py` for your code, you need to run `python wrap_cuda_submission.py` to wrap your CUDA code in `submission.cu` (in order to compile and link to PyTorch). Do this before you submit through `popcorn-cli` or run locally using `eval.py`.
+**Important**: Since the H100 job queue only accepts `submission.py` for your code, you need to run `python wrap_cuda_submission.py <SUNet ID>` to wrap your CUDA code in `submission.cu` (in order to compile and link to PyTorch). Do this before you submit through `popcorn-cli` or run locally using `eval.py`.
 
 #### Local Development on a GPU machine
 
