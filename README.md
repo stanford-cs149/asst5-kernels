@@ -24,7 +24,7 @@ Overall the goal is to practice open-ended performance engineering, must like wh
 
 The staff has selected the following kernels as options for the project. You can work on trying to optimize one or more of these kernels.  Please click on the links below to learn more about them.
 
-You can also view the performance of the best solutions from the class on the class leaderboards. You can find the leaderboard [here](http://44.228.22.179:8000/visual_leaderboards).
+You can also view the performance of the best solutions from the class on the class leaderboards. Please check Ed post (#870) for the link to the leaderboard.
 
 * [Histogram](problems/histogram)
 * [1d-occupancy-decoder](problems/1d-occupancy-decoder)
@@ -70,7 +70,7 @@ The instructions below are for a Myth machine, but similar sequence can be run o
 ---
 
 ### Step 2: Setup Environment Variables for Server Connection
-To enable connection to our server for submission, you'll need to setup enviroment variables. Please check Ed post regarding Assignment 5 release for `setup.sh`. With the script, please run:
+To enable connection to our server for submission, you'll need to setup enviroment variables. Please check Ed post (#849) regarding Assignment 5 release for `setup.sh`. With the script, please run:
 ```bash
 bash setup.sh
 ```
